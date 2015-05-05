@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+  <h1>主題：{{ post.title }}</h1>
+  <p>內容：{{ post.body }}</p>
+  <body bgcolor="FFFFCC">
+  <a href="http://localhost:3000/">
+<img src="https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xfp1/v/t1.0-9/21699_447549482079066_6336489699533472935_n.jpg?oh=d0d7b7d160f9822231f12989832efabb&oe=55D55705&__gda__=1439402758_e60dc26970c81508b75d30b277b6d89d"></a>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block title %}Posts{% endblock %}
+
+{% block content %}
+  <h1> <font color="663300">Birdy的留言板</font></h1>
+  <body bgcolor="FFFFCC">
+  <a href="https://www.facebook.com/birdy.hsu.7">My Facebook</a>
+  <a href="https://www.facebook.com/groups/NQUHD/?ref=browser">熱舞社FB</a>
+  <a href="http://ccckmit.wikidot.com/">陳鍾誠的網站</a>
+  <hr width=80% color=0000ff size=2 align=left>
+  <img src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/10003537_272961246204558_1775266599_n.jpg?oh=e814a5e38964732ea417c08daf1a294e&oe=55D9B7D6&__gda__=1439611531_f1819e3e1e3d053e1a0c0d10c3314b77" width="179" height="320">
+  <p><font size="4" color="663300">你有 <strong>{{ posts.length }}</strong> 則留言!</font></p>
+  <p><a href="/post/new"><s>快來胡亂</s>新增個留言吧</a></p>
+  <ul id="posts">
+    {% for post in posts %}
+      <li>
+        <h2>{{ post.title }}</h2>
+        <p><a href="/post/{{ post.id }}">閱覽留言</a></p>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

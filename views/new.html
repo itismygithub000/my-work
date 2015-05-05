@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block title %}New Post{% endblock %}
+
+{% block content %}
+  <h1><font color="663300">新留言</font></h1>
+  <marquee bgcolor=ffffcc width=70%>想說什麼就說吧，不用太顧慮呀~</marquee>
+  <p>建立新留言</p>
+  <body bgcolor="99FFFF">
+  <form action="/post" method="post">
+    <p><input type="text" placeholder="主題" name="title"></p>
+    <p><textarea placeholder="內容" name="body"></textarea></p>
+    <p><input type="submit" value="留言"></p>
+  </form>
+{% endblock %}
